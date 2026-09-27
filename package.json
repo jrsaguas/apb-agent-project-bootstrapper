@@ -1,8 +1,12 @@
 {
   "name": "apb-agent-project-bootstrapper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "type": "module",
   "description": "Chrome/Edge extension for supervised continuous ChatGPT project runs.",
-  "scripts": {"check":"node --check background.js && node --check content.js && node --check sidepanel.js"},
+  "scripts": {
+    "check": "node --check background.js && node --check content.js && node --check sidepanel.js && node --check src/markers.js && node --check src/phrases.js && node --check src/state.js",
+    "test": "node --test test/*.test.js"
+  },
   "license": "MIT"
 }
